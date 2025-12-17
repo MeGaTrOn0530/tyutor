@@ -17,7 +17,7 @@ app.use(express.json())
 app.use("/uploads", express.static("uploads"))
 
 // MongoDB Connection
-mongoose.connect("mongodb+srv://azizbekavalov132_db_user:sBWMy34g2NGFaoNO@tyutor.gpmrpqd.mongodb.net/?appName=tyutor", {
+mongoose.connect(process.env.MONGO_URI) {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
